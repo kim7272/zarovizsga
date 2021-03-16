@@ -1,7 +1,14 @@
-package hu.nive.ujratervezes.zarovizsga.kennel;
+ /* package hu.nive.ujratervezes.zarovizsga.kennel;
 
-public class Beagle {
+public class Beagle extends Dog {
+    private
+
+    public Beagle(String name) {
+        super(name);
+    }
+
     public int getHappiness() {
+
     }
 
     public void feed() {
@@ -13,3 +20,7 @@ public class Beagle {
     public String getName() {
     }
 }
+
+  */
+
+

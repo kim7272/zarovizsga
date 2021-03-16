@@ -1,4 +1,4 @@
-package hu.nive.ujratervezes.zarovizsga.digitscounter;
+ package hu.nive.ujratervezes.zarovizsga.digitscounter;
 
 import org.junit.jupiter.api.Test;
 

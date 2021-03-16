@@ -1,4 +1,4 @@
-package hu.nive.ujratervezes.zarovizsga.kennel;
+/* package hu.nive.ujratervezes.zarovizsga.kennel;
 
 public class Husky {
     public String getName() {
@@ -13,3 +13,5 @@ public class Husky {
     public void play(int i) {
     }
 }
+
+ */

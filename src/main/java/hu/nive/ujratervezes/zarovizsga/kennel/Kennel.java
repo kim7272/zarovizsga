@@ -1,4 +1,4 @@
-package hu.nive.ujratervezes.zarovizsga.kennel;
+/* Package hu.nive.ujratervezes.zarovizsga.kennel;
 
 import java.util.List;
 
@@ -21,3 +21,6 @@ public class Kennel {
     public void feedAll() {
     }
 }
+
+ */
+
