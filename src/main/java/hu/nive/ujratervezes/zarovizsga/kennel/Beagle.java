@@ -1,26 +1,26 @@
- /* package hu.nive.ujratervezes.zarovizsga.kennel;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
 public class Beagle extends Dog {
-    private
 
     public Beagle(String name) {
         super(name);
     }
 
-    public int getHappiness() {
-
-    }
-
     public void feed() {
+        this.happiness = happiness + 2;
     }
 
     public void play(int i) {
+        this.happiness = happiness + i * 2;
     }
 
-    public String getName() {
-    }
+
+
+
+
+
 }
 
-  */
+
 
 

@@ -1,10 +1,10 @@
-/*  package hu.nive.ujratervezes.zarovizsga.kennel;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
-abstract class Dog {
+public abstract class Dog {
 
 
-   private String name;
-   private int happiness = 1;
+   protected String name;
+   protected int happiness;
 
 
     public String getName() {
@@ -17,13 +17,15 @@ abstract class Dog {
 
     public Dog(String name) {
         this.name = name;
+        this.happiness = 0;
     }
 
-    abstract void feed();
+    public abstract void feed();
 
-    abstract void play(int hours);
+    public abstract void play(int hours);
+
 }
 
- */
+
 
 

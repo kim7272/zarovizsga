@@ -1,4 +1,4 @@
-/* package hu.nive.ujratervezes.zarovizsga.kennel;
+package hu.nive.ujratervezes.zarovizsga.kennel;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -64,6 +64,5 @@ public class KennelTest {
     }
 }
 
- */
 
 
