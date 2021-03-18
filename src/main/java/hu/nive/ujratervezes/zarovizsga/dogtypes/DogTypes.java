@@ -1,9 +1,8 @@
-  package hu.nive.ujratervezes.zarovizsga.dogtypes;
+package hu.nive.ujratervezes.zarovizsga.dogtypes;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -17,27 +16,30 @@ public class DogTypes {
 
 
     public List<String> getDogsByCountry(String country) {
-            try (
-                    Connection conn = dataSource.getConnection();
-                    PreparedStatement stmt = conn.prepareStatement("select * from activities where country = ?");
-            ) {
-                stmt.setString(1, country);
-                List<String> result = selectActivityByPreparedStatement(stmt);
-                if (result.size() == 1) {
-                    return result;
-                }
-                throw new IllegalArgumentException("Not found!");
+        List<String> result = new ArrayList<>();
+        country.toUpperCase();
 
-            } catch (SQLException se) {
-                throw new IllegalStateException("Cannot select activitiy!", se);
+        try (
+                Connection conn = dataSource.getConnection();
+                PreparedStatement stmt =
+                        conn.prepareStatement("select name from dog_types where country = ?");
+        ) {
+            stmt.setString(1, country);
+            try (
+                    ResultSet rs = stmt.executeQuery();
+            ) {
+                while (rs.next()) {
+                    String name = rs.getString("name").toLowerCase();
+                    result.add(name);
+                }
+                return result;
+            }
+            } catch (SQLException sqle) {
+                throw new IllegalArgumentException("Error by insert", sqle);
             }
         }
-
-
-
-
     }
-}
+
 
 
 
